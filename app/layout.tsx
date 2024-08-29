@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import MainHeader from "./components/mainHeader";
 
 export const metadata: Metadata = {
     title: "Next App Router Test",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                <MainHeader />
+                {children}
+            </body>
         </html>
     );
 }
